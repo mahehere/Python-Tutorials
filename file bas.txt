@@ -1,0 +1,3 @@
+This is a file to test
+the python file I/O basics
+Testing in progress
