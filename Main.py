@@ -186,17 +186,67 @@
 
 # fstrings and module path
 
-x = "Mahesh"
-y = "Manju"
+# x = "Mahesh"
+# y = "Manju"
+#
+# try:
+#     print("the name is: ",y,d)
+# except Exception:
+#     print(f"the name is : {x}")
+#
+# print(f"Hi my name is {x} and the second name is {y}")
+#
+# print("Hi my name is", x, "and the second name is", y)
 
-try:
-    print("the name is: ",y,d)
-except Exception:
-    print(f"the name is : {x}")
+# import sys
+# print(sys.copyright)
 
-print(f"Hi my name is {x} and the second name is {y}")
+# import Sample
+# x = Sample.z
+# print(x)
+# ls = ["a", "b", 1, 2]
+# ls = list(map(str, ls))
+# a = " and ".join(ls)
+# print(a, ", printed using join function")
 
-print("Hi my name is", x, "and the second name is", y)
+#
+# def func(a):
+#     """This is a function to add 2 nums"""
+#     print(a+a)
+#
+#
+# func(5)
+# print(func.__doc__)
 
+# import time
+# import functools
+#
+#
+# def add(x, y):   # function that adds 2 numbers
+#     return x-y
+#
+#
+# num1 = [1, 2, 5, 7]
+# num2 = [1, 1, 3, 4]
+# num3 = [5,7,8,9,10]
+# num6 = ('a','b','c','d')
+#
+# numbers = list(map(lambda x, y: x+y, num1, num2))  # Map function with lambda function usage
+# number = map(add, num1, num2)
+# num4 = filter(lambda x: x % 2 != 0, num3)
+# num_5 = functools.reduce(lambda x, y: x + y, num1)
+# num7 = functools.reduce(lambda x, y: x + y, num6)
+# print(list(numbers))
+# print(list(number))
+# print(list(num4))
+# print(int(num_5))
+# print(f"The answer from reduce is :", {num7})
+# print(time.asctime())
 
+#import pygame
+import playsound
+playsound.playsound('C:/Users/Mahesh/Downloads/Drinking-Water')
+# print("Playing mp3")
+#pygame.mixer.init()
+#pygame.mixer.get_init()
 
