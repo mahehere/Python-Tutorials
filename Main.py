@@ -169,18 +169,34 @@
 #
 #
 #
-#input("Enter class")
+# input("Enter class")
 
-a = [10,20,"mahesh","sam",30,50,4,6,8,20]  #str(input("enter the letter"))
-for i in a:
-    #print(i)
-    if str(i).isnumeric() and i > 10:
-        print(i)
-
+# a = [10,20,"mahesh","sam",30,50,4,6,8,20]  #str(input("enter the letter"))
+# for i in a:
+#     #print(i)
+#     if str(i).isnumeric() and i > 10:
+#         print(i)
 
 
 # print(a)
 # if a == 's':
 #     print("True")
 # else:
-#     print("False")
+# print("False")
+
+# fstrings and module path
+
+x = "Mahesh"
+y = "Manju"
+
+try:
+    print("the name is: ",y,d)
+except Exception:
+    print(f"the name is : {x}")
+
+print(f"Hi my name is {x} and the second name is {y}")
+
+print("Hi my name is", x, "and the second name is", y)
+
+
+
