@@ -243,10 +243,5 @@
 # print(f"The answer from reduce is :", {num7})
 # print(time.asctime())
 
-#import pygame
-import playsound
-playsound.playsound('C:/Users/Mahesh/Downloads/Drinking-Water')
-# print("Playing mp3")
-#pygame.mixer.init()
-#pygame.mixer.get_init()
+
 
