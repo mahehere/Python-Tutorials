@@ -218,7 +218,7 @@
 # func(5)
 # print(func.__doc__)
 
-# import time
+import time
 # import functools
 #
 #
@@ -244,4 +244,127 @@
 # print(time.asctime())
 
 
+# class MyClass:
+#     x = 5
+#
+#
+# P1 = MyClass()
+# print(P1.x)
 
+# class Person:
+#     def __init__(self, aname, aage):
+#         self.name = aname
+#         self.age = aage
+#
+#     def print_details(self):
+#         return f"The name is. {self.age} and The age is. {self.name}"
+#
+#
+# class Emp:
+#     pass
+#
+#
+# def abcd():
+#     pass
+#
+#
+# p1 = Person("Mahesh", 34)
+# print(p1.print_details())
+# P1.name = "Mahesh"
+# P1.age = 34
+# P1.age = 34
+# print(P1.name, P1.age)
+# print(P1.age)
+
+# mahesh = Employer()
+# # manju = Employer()
+# #
+# mahesh.name = "Mahesh"
+# # mahesh.age = 34
+# #
+# # print(Employer.__dict__)
+# # print(mahesh.name)
+# print(Employer.__dict__)
+#
+# print()
+
+# class Student:
+#     classteachername = "ABC"
+#     section = "A Section"
+#     branch = "and CSE branch"
+#     age = 20
+#
+#     @classmethod
+#     def change_section(cls, newsection):
+#         section = newsection
+#
+#     def sectoin_1(self):
+#         return self.section, self.branch
+#     def __init__(self,name,age,bgrp):
+#         self.name = name
+#         self.age = age
+#         self.bgrp = bgrp
+#         return
+#
+#
+#
+# Mahesh = Student("Mahesh", 34, "A1+")
+# #Manju = Student()
+# # name = Student()
+# # age = Student()
+# # section = Student()
+# # subjects = Student()
+# Mahesh.section = "B"
+# #Mahesh.name = "Mahesh"
+# #Manju.age = 29
+# Mahesh.age = 34
+# Mahesh.bgrp = "A1+"
+# Student.age = 30
+#
+# print(Mahesh.section)
+# # print(Student.age)
+# # print(Manju.age)
+# # print(Mahesh.name)
+# # print(Mahesh.__dict__)
+# # print(Manju.__dict__)
+# # print(Student.__dict__)
+# print("These are the details of",Mahesh.sectoin_1(), "and the student is", Mahesh.name)
+# print(Mahesh.name)
+
+class ElectronicDevice:
+    device = ("Pager", "Watch", "Digital Clock")
+    device1 = ("A", "B")
+
+    # def __init__(self):
+    #     self.device = Phone()
+
+    def rd(self):
+        return self
+
+    def ecd(self):
+        return f"This is the part of Electronic device class which has", {ed.device}
+
+
+class PocketGadget(ElectronicDevice):
+    device1 = ("Alarm", "Phone", "Apple iPad", "Pager")
+
+    def rd1(self):
+        return f"This is the part of Pocket device and contains", {self.device}
+
+
+class Phone(PocketGadget):
+    device2 = ("Apps", "Updates", "Versions", "Alarm", "Digital Clock")
+
+    def fd(self):
+        return f"This is the part of phone class and contains", {self.device}
+
+    # def __add__(self):
+    #     return self.device + self.device1
+
+
+ed = ElectronicDevice()
+pc = PocketGadget()
+ph = Phone()
+
+print(pc.device, '\n', pc.device1, '\n', pc.rd(), '\n', pc.ecd(), '\n', ph.device1)
+print("This is overloading", ph.device1 + ph.device)

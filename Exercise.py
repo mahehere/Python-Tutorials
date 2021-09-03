@@ -205,7 +205,7 @@
 
 # rnd = random.choice(["snake", "water", "gun"])
 # print("Computer selected choice is :",rnd)
-#print("The Process time taken is :", time.process_time())
+# print("The Process time taken is :", time.process_time())
 # exit()
 
 # 7.Healthy Programmer
@@ -231,8 +231,8 @@ print("The Work duration is from 9AM to 5PM")
 
 def getdate():
     """This function is for getting the current system date and log it in txt file"""
-    return datetime.datetime.now()
-
+    # return datetime.datetime.now()
+    return time.asctime()
 
 def water():
     """This is the water function to remind programmer about drinking water"""
@@ -250,7 +250,7 @@ def water():
             # if a == "Done":
         elif a == "Done":
             pygame.mixer.music.stop()
-            print("Next Reminder is after 30 Minutes")
+            print("Next Reminder is after 60 Minutes")
             f = open("Water.txt", "a")  # can also use file command using "with open("Harry.txt","w") as f:"
             f.write("Last water intake for Programmer was at " + str(getdate()) + "")  # calls and logs the time in txt file
             # f.write("\n Got the user input as: ", a)
@@ -269,13 +269,10 @@ def water():
         # a = input(str("Please type 'done' after drinking water: ")).capitalize()
         # continue
 
-
         # exit()
     # while a == "":
     #     a = input("Please Type done after drinking water: ").capitalize()
     #     pygame.mixer.music.play(-1)
-
-
 
     # print("Next Reminder is after 30 Minutes")
     # f = open("Water.txt", "a")  # can also use file command using "with open("Harry.txt","w") as f:"
@@ -286,17 +283,60 @@ def water():
 
 
 def eyes():
-    print("This is the Eye function")
-    f = open("Eyes.csv", "a")
-    print(datetime.datetime.now())
-    f.close()
+    """This is the Eye function"""
+    # f = open("Eyes.csv", "a")
+    # print(datetime.datetime.now())
+    # f.close()
+    pygame.mixer.init()
+    pygame.mixer.music.load("Funny-Door.mp3")
+    pygame.mixer.music.play(-1)
+    a = input(str("Please type 'done' after blinking eyes for 10 times: ")).capitalize()
+    # pygame.mixer.music.play(-1)
+    while True:
+        if a != "Done":
+            # if a == 'done':
+            pygame.mixer.music.play(-1)
+            a = input(
+                "Please type 'done' after blinking eyes for 10 times: ").capitalize()  # Getting user input and capitalising first char
+            # if a == "Done":
+        elif a == "Done":
+            pygame.mixer.music.stop()
+            print("Next Reminder is after 30 Minutes")
+            f = open("Eye.txt", "a")  # can also use file command using "with open("Harry.txt","w") as f:"
+            f.write("Last eye exercise for the Programmer was at " + str(getdate()) + "")  # calls and logs the time in txt file
+            # f.write("\n Got the user input as: ", a)
+            f.write(" & The user input is: " + a + "\n")
+            f.close()  # close the txt file
+            break
 
 
 def phy_exercise():
-    print("This is the Exercise function")
-    f = open("Physical Exercise.csv", "a")
-    print(datetime.datetime.now())
-    f.close()
+    """This is the Ph.Exercise function"""
+    # f = open("Physical Exercise.csv", "a")
+    # print(datetime.datetime.now())
+    # f.close()
+    pygame.mixer.init()
+    pygame.mixer.music.load("Ba-Bum.mp3")
+    pygame.mixer.music.play(-1)
+    a = input(str("Please type 'done' after 5 mins of phy.exercise: ")).capitalize()
+    # pygame.mixer.music.play(-1)
+    while True:
+        if a != "Done":
+            # if a == 'done':
+            pygame.mixer.music.play(-1)
+            a = input(
+                "Please type 'done' after 5 mins of phy.exercise: ").capitalize()  # Getting user input and capitalising first char
+            # if a == "Done":
+        elif a == "Done":
+            pygame.mixer.music.stop()
+            print("Next Reminder is after 45 Minutes")
+            f = open("Phy.Exercise.txt", "a")  # can also use file command using "with open("Harry.txt","w") as f:"
+            f.write(
+                "Last Phy.Exercise for the Programmer was at " + str(getdate()) + "")  # calls and logs the time in txt file
+            # f.write("\n Got the user input as: ", a)
+            f.write(" & The user input is: " + a + "\n")
+            f.close()  # close the txt file
+            break
 
 
 time.sleep(5)
@@ -315,4 +355,7 @@ time.sleep(5)
 
     # print("Please type your input: ")
 water()
-
+time.sleep(10)
+eyes()
+time.sleep(15)
+phy_exercise()

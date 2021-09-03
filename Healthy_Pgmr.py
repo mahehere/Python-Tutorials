@@ -19,7 +19,8 @@ print("The Work duration is from 9AM to 5PM")
 
 def getdate():
     """This function is for getting the current system date and log it in txt file"""
-    return datetime.datetime.now()
+    # return datetime.datetime.now()
+    return time.asctime()
 
 
 def water():
